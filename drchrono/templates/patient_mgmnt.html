@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <title> Welcome to drchrono! </title>
+</head>
+
+<body>
+    <nav class="nav navbar navbar-dark"> <a class="navbar-brand pull-left" href='#'>THE<span class="green-tag">DOC</span></a>
+        <ul class="nav navbar-nav pull-right">
+            <li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Appointments</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Reports</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Communications</a> </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <!--
+-->
+    <div style="margin-left:5rem;margin-right:5rem;">
+        <table class="table table_bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Date of Birth</th>
+                    <th>Birthday Mail Sent</th>
+                </tr>
+            </thead>
+            <tbody> {% for en in data%}
+                <tr>
+                    <td>{{en.0}}</td>
+                    <td>{{en.1}}</td> {% if en.3 == 'None'%}
+                    <td style="color:red;">Update - DOB Missing!</td>
+                    {% elif en.2 == '' %}
+                    <td class="call">SET REMINDER TO WISH</td>
+
+                    {% else %}
+                    <td>{{en.2}}</td> {% endif %}
+                    <td>{{en.4|date:"M d"}}</td>
+                    {% if en.3 > date %}
+                    <td>
+                    <i style="color:red;" class="fa fa-times"></i>
+                    </td>
+                    {% else %}
+                    <td>
+                      <i class="fa fa-check call"></i>
+                    </td>
+                     {%endif%} </tr> {%endfor%} </tbody>
+        </table>
+    </div>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/main1.js"></script>
+</body>
+
+</html>

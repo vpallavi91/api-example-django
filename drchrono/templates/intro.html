@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <title> Welcome to drchrono! </title>
+</head>
+
+<body>
+
+  {% if username == '' %}
+  <div class="modal fade" id="createModal" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h4>Please log in to continue!</h4>
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'social:begin' 'drchrono' %}"><button class="btn btn-lg btn-outline-success">Log in with Drchrono</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+      <!--<button class="btn btn-lg btn-outline-success"><a href="{% url 'social:begin' 'drchrono' %}">Learn More</a></button>-->
+  {% endif %}
+    <section id='cover'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="lead wall-sticker">MAKE.
+                        <br> LIFE.
+                        <br> HEALTHY.
+                        <br>
+                        <a href="#">
+                            <button class="btn btn-lg btn-outline-success">Learn More</button>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-md-9">
+                    <h1 class="motto"> WITH <span class='green-tag'>EVERY</span> PATIENT TREATED, WE MOVE CLOSER TO A HEALTHY WORLD.<br><br>LET'S MAKE THE <span class="green-underline">JOURNEY</span> SIMPLE. <br>
+                    <a href="#"><i class="fa fa-arrow-down fa-1.5x"></i></a></h1> </div>
+            </div>
+        </div>
+    </section>
+    <nav class="nav navbar navbar-dark"> <a class="navbar-brand pull-left" href='#'>THE<span class="green-tag">DOC</span></a>
+        <ul class="nav navbar-nav pull-left">
+            <li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Activities</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Timeline</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Numbers</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Testimonials</a> </li>
+        </ul>
+        {% if username != '' %}
+        <ul class="nav navbar-nav pull-right">
+          <li class="nav-item"> <a class="nav-link" href="#">Welcome {{ username }}</a> </li>
+        </ul>
+        {% endif %}
+    </nav>
+
+
+    <section class="features">
+        <div class='section-features'>
+            <div class="container">
+                <h2>What <span class = 'green-tag'>needs</span> to be done?</h2>
+                <p class="lead">Take a look at all the activities</p>
+                <div class='row'>
+                    <a href = "#">
+                      <div class='col-md-3 square'> <i class="fa fa-ambulance fa-5x"></i>
+                          <hr class='green-hr'>
+                          <h5>INFRASTRUCTURE</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </a>
+                    <a href = "#">
+                      <div class='col-md-3 square'> <i class="fa fa-line-chart fa-5x"></i>
+                          <hr class='green-hr'>
+                          <h5>LAB REPORTS</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </a>
+                    <a href = "#">
+                      <div class='col-md-3 square'> <i class="fa fa-medkit fa-5x"></i>
+                          <hr class='green-hr'>
+                          <h5>MEDICAL SUPPLIES</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </a>
+                    <a href = "/patients/">
+                      <div class='col-md-3 square'> <i class="fa fa-user-md fa-5x"></i>
+                          <hr class='green-hr'>
+                          <h5>PATIENTS</h5>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us" id="timeline">
+             <div class="section-timeline">
+                 <div class="container">
+                     <h2 class="heading">Your <span class="green-tag">Appointments</span></h2>
+                     <p class="lead under-heading">Get a grasp of today's schedule</p>
+                     <ul class="timeline">
+                         <li>
+                             <div class="timeline-badge">15:20</div>
+                             <div class="timeline-panel">
+                                 <div class="timeline-heading">
+                                     <h4 class="timeline-title">Melanie Su</h4>
+                                 </div>
+                                 <div class="timeline-body">
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ad, numquam, magnam nihil, necessitatibus minima fuga ab veniam harum animi doloribus sapiente recusandae illo eveniet in voluptatibus voluptate voluptatum deseruntLorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ad, numquam, magnam nihil, necessitatibus minima fuga ab veniam harum animi doloribus sapiente recusandae illo eveniet in voluptatibus voluptate voluptatum deserunt?</p>
+                                 </div>
+                             </div>
+                         </li>
+                          <li>
+                             <div class="timeline-badge">15:50</div>
+                             <div class="timeline-panel">
+                                 <div class="timeline-heading">
+                                     <h4 class="timeline-title"> John Wright</h4>
+                                 </div>
+                                 <div class="timeline-body">
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ad, numquam, magnam nihil, necessitatibus minima fuga ab veniam harum animi doloribus sapiente recusandae illo eveniet in voluptatibus voluptate voluptatum deseruntLorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ad, numquam, magnam nihil, necessitatibus minima fuga ab veniam harum animi doloribus sapiente recusandae illo eveniet in voluptatibus voluptate voluptatum deserunt?</p>
+                                 </div>
+                             </div>
+                         </li>
+                          <li>
+                             <div class="timeline-badge">16:30</div>
+                             <div class="timeline-panel">
+                                 <div class="timeline-heading">
+                                     <h4 class="timeline-title">Ana Clark</h4>
+                                 </div>
+                                 <div class="timeline-body">
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ad, numquam, magnam nihil, necessitatibus minima fuga ab veniam harum animi doloribus sapiente recusandae illo eveniet in voluptatibus voluptate voluptatum deseruntLorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ad, numquam, magnam nihil, necessitatibus minima fuga ab veniam harum animi doloribus sapiente recusandae illo eveniet in voluptatibus voluptate voluptatum deserunt?</p>
+                                 </div>
+                             </div>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </section>
+
+        <section id="section-parallax" data-type="background" data-speed="6">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-sm-8 offset-sm-2">
+                         <h2>Want to access staff <strong>information</strong>?</h2>
+                         <p><a href="#contact" class="btn btn-lg btn-success parallax-btn">Yes, please!</a></p>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+
+
+
+        <section id="numbers">
+             <div class="section-numbers">
+                 <div class="container">
+                     <h2>The <span class="green-tag">numbers</span> to look after</h2>
+                     <div class="col-sm-3">
+                         <div class="num">
+                             <div class="num-content">
+                                 <span class="counter">22</span>
+                                 <p>Patients scheduled Today</p>
+                             </div>
+                         </div>
+                     </div>
+                      <div class="col-sm-3">
+                         <div class="num">
+                             <div class="num-content">
+                                 <span class="counter">12</span>
+                                 <p>Bills To be Cleared</p>
+                             </div>
+                         </div>
+                     </div>
+                      <div class="col-sm-3">
+                         <div class="num">
+                             <div class="num-content">
+                                 <span class="counter">5</span>
+                                 <p>Reports to be approved</p>
+                             </div>
+                         </div>
+                     </div>
+                      <div class="col-sm-3">
+                         <div class="num">
+                             <div class="num-content">
+                                 <span class="counter">8</span>
+                                 <p>Interns appointed</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+    <section id="testimonials">
+             <div class="section-testimonials">
+                 <div class="container">
+                    <h2>Patients' <span class="green-tag">tesimonials</span></h2>
+                    <p class="lead ">Read what others say about our services.</p>
+                     <div class="row">
+                         <div class="col-sm-4">
+                             <div class="row testimonial">
+                                 <div class="col-sm-4">
+                                     <img src="../static/img/client1.jpg" class="mario-img">
+                                 </div>
+                                 <div class="col-sm-8">
+                                    <blockquote>
+                                        <i class="fa fa-quote-right"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aut assumenda velit quas impedit sequi illum iste eos voluptatibus provident, recusandae quia! In dolorum debitis accusamus suscipit voluptatem, sapiente id.
+                                        <hr class="testimonials-hr">
+                                        <cite>&#8212; Mario</cite>
+                                    </blockquote>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-sm-4">
+                             <div class="row testimonial">
+                                 <div class="col-sm-4">
+                                     <img src="../static/img/client3.jpg" class="monice-img">
+                                 </div>
+                                 <div class="col-sm-8">
+                                    <blockquote>
+                                        <i class="fa fa-quote-right"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aut assumenda velit quas impedit sequi illum iste eos voluptatibus provident, recusandae quia! In dolorum debitis accusamus suscipit voluptatem, sapiente id.
+                                        <hr class="testimonials-hr">
+                                        <cite>&#8212; Rebecca</cite>
+                                    </blockquote>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="col-sm-4">
+                             <div class="row testimonial">
+                                 <div class="col-sm-4">
+                                     <img src="../static/img/client4.jpg" class="monka-img">
+                                 </div>
+                                 <div class="col-sm-8">
+                                    <blockquote>
+                                        <i class="fa fa-quote-right"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aut assumenda velit quas impedit sequi illum iste eos voluptatibus provident, recusandae quia! In dolorum debitis accusamus suscipit voluptatem, sapiente id.
+                                        <hr class="testimonials-hr">
+                                        <cite>&#8212; Ashley</cite>
+                                    </blockquote>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+             </div>
+         </section>
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
